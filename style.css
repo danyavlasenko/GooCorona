@@ -1,0 +1,580 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: 12px;
+  color: grey;
+  font-family: Rubik;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1087px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main{
+  display: flex;
+  flex: 1 1 auto;
+}
+/*--------------------------HEADER------------------------*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+.header__logo {
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo__link img {
+  max-width: 100%;
+}
+.logo__text {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2.1;
+  color: #000000;
+}
+.logo__text span{
+  color: #EC5863;
+}
+.header__container {
+  display: flex;
+  min-height: 114px;
+  align-items: center;
+}
+/*--------------------------HEADER-MENU------------------------*/
+
+.header__menu {
+  flex: 1 1 auto;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  margin: 0 40px 0 0;
+}
+.menu__link {
+  color: #000;
+  font-weight: 700;
+  font-family: 'Raleway';
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+}
+/*--------------------------HEADER-BUTTON------------------------*/
+.header__button {
+  flex: 0 1 252px;
+  display: flex;
+  justify-content: flex-end;
+}
+.button {
+  display: inline-block;
+  font-family: 'Raleway';
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #FCFDFE;
+  line-height: 1.2;
+  background-color: #EC5863;
+  border-radius: 5px;
+  padding: 14px 30px;
+}
+.button_blue {
+  background-color: #4285F4;
+}
+/*--------------------------HEALTH------------------------*/
+.health{
+  width: 1087px;
+  margin: 0 auto;
+}
+.health__container {
+  padding: 150px 15px 50px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.health__container::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 267px;
+  top: 0;
+  background-color: #EC5863;
+  transform: translate(100%, 0);
+  border-radius: 30px 0 0 30px;
+}
+.health__contante {
+  display: flex;
+  align-items: center;
+  flex: 0 1 48%;
+  padding: 0px 20px;
+}
+.contante {
+}
+.contante__information {
+}
+.information {
+}
+.information__title {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 126%;
+  color: #000000;
+}
+.information__title span{
+  color: #4285F4;
+}
+.information__title:not(:last-child){
+  margin-bottom: 12px;
+}
+.information__text:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.information__text {
+  font-family: 'Rubik';
+  font-size: 18px;
+  line-height: 138.5%;
+  letter-spacing: 0.08em;
+}
+.information__button {
+}
+.button {
+}
+.contante__decorate {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 52%;
+}
+.decorate {
+}
+.decorate__item {
+}
+.decorate__img {
+}
+.health__watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+.watch {
+
+}
+.watch__link {
+
+}
+.watch__image {
+}
+.watch__body {
+  margin-left: 12px;
+}
+.watch__title {
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  line-height: 126%;
+}
+.watch__subtitle {
+  margin-top: 5px;
+  font-size: 9px;
+  line-height: 126%;
+  letter-spacing: 0.165em;
+  text-transform: uppercase;
+  color: #000000;
+}
+/*--------------------------STAY-SAFE------------------------*/
+.stay-safe__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 125px 15px 50px 15px;
+}
+.stay-safe__media {
+  flex: 0 1 50%;
+}
+.media {
+
+}
+.media__item {
+}
+.media__image {
+}
+.stay-safe__text {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text {
+}
+.text__title {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 126%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+.text__title span{
+  color: #EC5863;
+}
+
+.text__subtitle {
+  font-family: 'Rubik';
+  font-size: 18px;
+  line-height: 138.5%;
+  letter-spacing: 0.08em;
+  margin-bottom: 24px;
+}
+.text__button {
+}
+.button {
+}
+
+
+
+
+
+.experts__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 185px 15px 50px 15px;
+}
+
+.experts__decorate {
+  position: relative;
+}
+
+.decorate__numbers {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.numbers {
+}
+.numbers__img {
+  
+}
+.experts__info {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.info {
+}
+.info__text {
+  flex: 0 1 50%;
+  padding: 0px 20px;
+}
+.text {
+}
+.text__title span {
+  color: #587EEC;
+}
+.text__subtitle {
+}
+.text__buttons {
+}
+.button {
+}
+.info__video {
+  flex: 0 1 50%;
+}
+
+.footer__container {
+  padding: 180px 15px 50px 15px;
+}
+.footer__text {
+  text-align: center;
+}
+.text {
+}
+.text__title span {
+  color: #EC5863;
+}
+.text__subtitle {
+}
+.footer__decorate{
+}
+
+.cards {
+  margin-top: 47px;
+  
+}
+.cards__list {
+  flex-wrap:wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 72px;
+}
+.cards__item { 
+  width: 278.17px;
+  height: 276.52px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+  border-radius: 8px;
+}
+.item {
+
+}
+.item-image {
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item__title {
+  margin-top: 58px;
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 138.5%;
+  text-align: center;
+  letter-spacing: 0.08em;
+  color: #000000;
+}
+.item__subtitle {
+  width: 280px;
+  text-align: center;
+  padding: 0 15px;
+  margin-top: 4px;
+  font-family: 'Rubik';
+  font-size: 12px;
+  line-height: 138.5%;
+  letter-spacing: 0.08em;
+  color: #616161;
+}
+.footer__buttons {
+  display: flex;
+  gap: 57px;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  margin-top: 71px;
+}
+.buttons__item {
+}
+.button__link {
+}
+.button__image {
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------MEDIA-REQUESTS------------------------*/
+@media (max-width:1087px) {
+  [class*="__container"] {
+    max-width: 1057px;
+  }
+}
+@media (max-width:991.98px) {
+  .health__container::before{
+    right: 185px;
+  }
+  .header__button{
+    flex: 0 1 170px;
+  }
+  .menu__item {
+    margin: 0 30px 0 0;
+  }
+
+}
+@media (max-width:767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
+  .logo__text{
+    display: none;
+  }
+  .health__container::before{
+    display: none;
+  }
+  .health__contante {
+      flex: 1 0 100%;
+  }
+  .contante__decorate {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex: 1 0 100%;
+  }
+  .stay-safe__text {
+    flex: 1 1 100%;
+    order: -1;
+    margin-bottom: 40px;
+  }
+  .stay-safe__container {
+    padding-top: 57px;
+  }
+  .stay-safe__media {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .info__text {
+    flex: 1 1 100%;
+  }
+  .info__video {
+    margin-top: 40px;
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 668.98px){
+  .header__button{
+    flex: 1 1 146px;
+    justify-content: center;
+  }
+  .header__container {
+    flex-wrap: wrap;
+  }
+  .menu{
+    justify-content: center;
+  }
+  .menu__item{
+    margin: 0 15px 0 0;
+  }
+  .experts__container{
+    padding: 93px 15px 50px 15px;
+  }
+
+}
+@media (max-width: 479.98px){
+  .logo{
+    flex: 0 1 100%;
+  }
+  .header__container{
+    gap: 20px;
+  }
+  .header__button{
+    flex: 0 1 100%;
+  }
+  .stay-safe__container {
+    padding-top: 20px;
+  }
+  .footer__container {
+    padding: 90px 15px 50px 15px;
+  }
+  .health__container{
+    padding: 200px 15px 80px 15px;
+  }
+}
+
+@media (max-width: 368px){
+  .menu__list{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .menu__link{
+    line-height: 2.2;
+  }
+  .health__container {
+    padding: 250px 15px 50px 15px;
+  }
+}
